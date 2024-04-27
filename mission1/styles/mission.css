@@ -32,12 +32,9 @@ p{
 
 }
 
-h3 {
-  padding-left: 400px;
-  padding-right: 400px;
-  text-align:left;
-  line-height:1.5
-
+.logo {
+  width: 150px; 
+  padding-top: 20px;
 }
 
 
