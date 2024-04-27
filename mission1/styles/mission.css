@@ -27,9 +27,19 @@ p{
   padding-left: 450px;
   text-align:left;
   padding-right: 450px;
-  letter-spacing: .01rem
+  letter-spacing: .01rem;
+  line-height:1.5;
 
 }
+
+li {
+  padding-left: 400px;
+  padding-right: 400px;
+  text-align:left;
+  line-height:1.5
+
+}
+
 
 
 
