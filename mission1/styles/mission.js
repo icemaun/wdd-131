@@ -17,4 +17,4 @@ if (dark === 'dark') {
 }
 }
 
-themeSelector.addEventListener('click', changeTheme);
+themeSelector.addEventListener('dark', changeTheme);
