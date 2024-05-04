@@ -42,6 +42,11 @@ main{
 
 }
 
+.dark main{
+  color: #F0F4F7;
+  
+}
+
 .logo {
   width: 150px; 
   padding-top: 20px;
