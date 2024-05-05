@@ -8,12 +8,12 @@ if (dark === 'dark') {
     
     document.body.classList.add('dark');
     
-    document.getElementById('byui-logo').src = "images/byui-logo_white.webp";
+    document.getElementById('logo').src = "images/byui-logo_white.webp";
 } else {
     
     document.body.classList.remove('dark');
     
-    document.getElementById('byui-logo').src = "images/byui-logo_blue.webp";
+    document.getElementById('logo').src = "images/byui-logo_blue.webp";
 }
 }
 
