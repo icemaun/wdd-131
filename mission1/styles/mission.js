@@ -3,9 +3,9 @@ const themeSelector = document.getElementById('dark')
 
 function changeTheme() {
 
- const dark = themeSelector.options[themeSelector.selectedIndex].value;
+const selectedOption = themeSelector.value;
 
-if (dark === 'dark') {
+if (selectedOption === 'dark') {
     
     document.body.classList.add('dark');
     
