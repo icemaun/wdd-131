@@ -3,7 +3,7 @@ const themeSelector = document.getElementById('dark')
 
 function changeTheme() {
 
-const dark = themeSelector.checked;
+const dark = themeSelector.value;
 
 if (dark === 'dark') {
     
