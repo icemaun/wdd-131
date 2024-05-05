@@ -1,3 +1,4 @@
+document.addEventListener('DOMContentLoaded', function() {
 const themeSelector = document.getElementById('dark')
 
 function changeTheme() {
@@ -17,4 +18,6 @@ if (dark === 'dark') {
 }
 }
 
+
 themeSelector.addEventListener('dark', changeTheme);
+});
