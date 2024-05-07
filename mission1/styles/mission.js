@@ -19,4 +19,4 @@ if (selectedOption === 'dark') {
 }
 
 
-themeSelector.addEventListener('dark', changeTheme);
+themeSelector.addEventListener('change', changeTheme);
