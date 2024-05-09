@@ -5,7 +5,7 @@ function changeTheme() {
 
 const selectedOption = themeSelector.value;
 
-if (selectedOption === 'dark') {
+if (selectedOption === 'dark'){
     
     document.body.classList.add('dark');
     
