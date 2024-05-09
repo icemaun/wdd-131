@@ -5,14 +5,14 @@ function changeTheme() {
 
 const selectedOption = themeSelector.value;
 
-if (selectedOption === 'click') {
+if (selectedOption === 'dark') {
     
-    document.body.classList.add('click');
+    document.body.classList.add('dark');
     
     document.getElementById('byui-logo').src = "images/byui-logo_white.webp";
 } else {
     
-    document.body.classList.remove('click');
+    document.body.classList.remove('dark');
     
     document.getElementById('byui-logo').src = "images/byui-logo_blue.webp";
 }
