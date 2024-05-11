@@ -1,0 +1,62 @@
+@import url("https://fonts.googleapis.com/css2?family=family=Mooli&display=swap");
+:root {
+--primary-color: #52489c;
+--secondary-color: #59c3c3;
+--accent-color: #ebebeb;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: Mooli, san-serif;
+}
+
+body {
+ font-family: var(--primary-font);
+ font-size: 1.2em;
+   background-color: #ebebeb;
+}
+a:link,
+a:visited {
+ color: var(--accent-color);
+}
+
+header{
+   
+   background-color: #52489c;
+   padding: 30px
+   
+}
+
+h1{
+
+   text-align: center;
+   color:#ebebeb
+	
+}
+
+nav{
+   text-align: center;
+   display: flex;
+ justify-content: space-around;
+   
+   
+}
+
+
+
+h2{
+   text-align: center;
+   
+}
+
+figure {
+   max-width: 100%;
+}
+
+footer{
+   
+   background-color: #52489c;
+   padding:20px
+}
+
+
+
