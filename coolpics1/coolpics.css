@@ -4,7 +4,7 @@
 --secondary-color: #59c3c3;
 --accent-color: #ebebeb;
 --text-dark: #333;
---text-light: #ebebeb;
+--text-light: #ffffff;
 --primary-font: Arial, Helvetica,sans-serif;
 --secondary-font: Mooli, san-serif;
 }
@@ -50,6 +50,18 @@ h2{
 
 figure {
    max-width: 100%;
+}
+
+main section {
+    text-align: center;
+    font-size: .6em;
+
+}
+
+.gallery2 {
+    border: 10px solid #ffffff;
+    transition: transform .5s;
+    box-shadow: 5px 5px 10px #6f7364;
 }
 
 footer{
