@@ -60,14 +60,14 @@ main section {
 
 .gallery {
         display: grid;
-        grid-template-columns: repeat(11, 2fr); /* 11 equal columns */
-        grid-template-rows: auto auto; /* Two auto-sized rows */
+        grid-template-columns: repeat(11, 2fr); 
+        grid-template-rows: auto auto; 
         gap: 100px; 
 }
 
 .gallery3 {
         display: grid;
-        grid-template-columns: repeat(11, 2fr); /* 11 equal columns */
+        grid-template-columns: repeat(11, 2fr); 
         grid-template-rows: auto auto; 
         gap: 100px; /
 }
