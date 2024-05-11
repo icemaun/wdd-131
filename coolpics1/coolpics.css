@@ -58,11 +58,29 @@ main section {
 
 }
 
+.gallery {
+        display: grid;
+        grid-template-columns: repeat(11, 2fr); /* 11 equal columns */
+        grid-template-rows: auto auto; /* Two auto-sized rows */
+        gap: 100px; 
+}
+
+.gallery3 {
+        display: grid;
+        grid-template-columns: repeat(11, 2fr); /* 11 equal columns */
+        grid-template-rows: auto auto; 
+        gap: 100px; /
+}
+
+
+
 .gallery2 {
     border: 10px solid #ffffff;
     transition: transform .5s;
     box-shadow: 5px 5px 10px #6f7364;
 }
+
+
 
 footer{
    
