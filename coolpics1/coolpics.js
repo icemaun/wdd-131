@@ -1,46 +1,58 @@
 const menuButton = document.querySelector(".menu-button");
+
+// Function to toggle the menu visibility
 function toggleMenu() {
   const menu = document.querySelector(".menu");
   menu.classList.toggle("hide");
 }
 
+// Attach event listener to the menu button
 menuButton.addEventListener("click", toggleMenu);
 
+// Function to handle window resize and adjust menu visibility accordingly
 function handleResize() {
-    const menu = document.querySelector(".menu");
-    if (window.innerWidth > 1000) {
-      menu.classList.remove("hide");
-    } else {
-      menu.classList.add("hide");
-    }
+  const menu = document.querySelector(".menu");
+  if (window.innerWidth > 1000) {
+    menu.classList.remove("hide");
+  } else {
+    menu.classList.add("hide");
   }
-  
-  handleResize();
-  window.addEventListener("resize", handleResize);
+}
 
-  function viewerTemplate(pic, alt) {
-    return `<div class="viewer">
-      <button class="close-viewer">X</button>
-      <img src="${pic}" alt="${alt}">
-      </div>`;
-  }
+// Call handleResize initially and attach event listener for window resize
+handleResize();
+window.addEventListener("resize", handleResize);
 
-  function viewHandler(event) {
-	// create a variable to hold the element that was clicked on from event.target
-    const clickedElement = event.target;
+// Viewer template function
+function viewerTemplate(pic, alt) {
+  return `<div class="viewer">
+    <button id="closeButton" class="close-viewer">X</button>
+    <img src="${pic}" alt="${alt}">
+    </div>`;
+}
 
-	// get the src attribute from that element and 'split' it on the "-"
-    const srcParts = clickedElement.src.split("-");
-
-	// construct the new image file name by adding "-full.jpeg" to the first part of the array from the previous step
-    const newSrc = srcParts[0] + "-full.jpeg";
-
-	// insert the viewerTemplate into the top of the body element
-	// (element.insertAdjacentHTML("afterbegin", htmltoinsert))
-    document.body.insertAdjacentHTML("afterbegin", viewerTemplate);
-
-	// add a listener to the close button (X) that calls a function called closeViewer when clicked
+// View handler function
+function viewHandler(event) {
+  // Check if the clicked element is an image
+  if (event.target.tagName === "IMG") {
+    // Get the src attribute from the clicked image
+    const src = event.target.src;
+    // Call viewerTemplate with src and a default alt text
+    const viewerHtml = viewerTemplate(src, "Image");
+    // Insert the viewer HTML into the body
+    document.body.insertAdjacentHTML("afterbegin", viewerHtml);
+    // Add event listener to the close button
     const closeButton = document.getElementById("closeButton");
-	closeButton.addEventListener("click", closeViewer);
+    closeButton.addEventListener("click", closeViewer);
+  }
+}
 
+// Attach click event listener to the body to handle image clicks
+document.body.addEventListener("click", viewHandler);
+
+// Function to close the viewer
+function closeViewer() {
+  // Remove the viewer element from the DOM
+  const viewer = document.querySelector(".viewer");
+  viewer.remove();
 }
