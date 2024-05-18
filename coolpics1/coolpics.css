@@ -26,9 +26,8 @@ header{
    
 }
 
-viewer{
-   display:fixed;
-
+.viewer{
+   display:center;
 
 }
 
