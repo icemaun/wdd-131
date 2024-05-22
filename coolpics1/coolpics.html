@@ -4,12 +4,14 @@
     <link rel="stylesheet" href="coolpics.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="coolpics.js" defer ></script>
     <title>Cool Pics </title>
 </head>
 <body>
     <header>
-        <h1>Cool Pics 📷</h1>        
-        <nav>
+        <h1>Cool Pics 📷</h1>
+        <button class="menu-button" >menu</button>        
+        <nav class="menu">
             <a href="coolpics.html">Home</a>
             <a href="#">People</a>
             <a href="#">Places</a>
@@ -18,42 +20,27 @@
         </nav>
       
     </header>
-
-    <div class= viewer>
-        <button class="close-viewer">X</button>
-        <img src="image.jpeg" alt="picture" onclick="viewHandler(event)">
-    </div>
-
     
     <main>
+        
+        <div class="viewer">
+            <button class="close-viewer">X</button>
+            <img src="image.jpeg" alt="picture">
+        </div>
+        
         <h2>Current Work</h2>
         
         <section class="gallery">
-            <figure class="gallery2">  
-                <img src="images/norris-sm.jpeg" alt="picture">
-            </figure>
-
-            <figure class="gallery2">  
-                <img src="images/norris-sm.jpeg" alt="picture">
-            </figure>
-    
-            <figure class="gallery2">  
-                <img src="images/norris-sm.jpeg" alt="picture">
-            </figure>
-        </section>
-        <section class="gallery3">    
-            <figure class="gallery2">  
-                <img src="images/norris-sm.jpeg" alt="picture">
-            </figure>
-    
-            <figure class="gallery2">  
-                <img src="images/norris-sm.jpeg" alt="picture">
-            </figure>
-    
-            <figure class="gallery2">  
-                <img src="images/norris-sm.jpeg" alt="picture">
-            </figure>
-
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            <img src="images/norris-sm.jpeg" alt="picture">
+            
         </section>
 
     </main>
