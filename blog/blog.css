@@ -14,7 +14,7 @@ body {
 }
 
 .main-header {
-    background-color: #f8f8f8;
+    
     padding: 10px 0;
     border-top: 2px solid #EFC69B;  
     border-bottom: 2px solid #EFC69B;  
@@ -90,5 +90,3 @@ body {
     font-size: 1em;
     margin: 0;
 }
-
-
