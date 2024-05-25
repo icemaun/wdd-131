@@ -42,3 +42,53 @@ body {
 .main-header nav ul li a:hover {
     color: #007BFF;
 }
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    
+}
+
+.review {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 20px;
+    
+}
+
+.review-title {
+    grid-column: span 2;
+    font-size: 1.5em;
+    margin: 0 0 10px;
+    color: #AF1B3F;
+    
+}
+
+.book-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-cover {
+    max-width: 100%;
+    height: auto;
+}
+
+.review-content {
+    font-size: 1em;
+    margin: 0;
+}
+
+
