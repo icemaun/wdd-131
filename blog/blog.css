@@ -14,7 +14,6 @@ body {
 }
 
 .main-header {
-    
     padding: 10px 0;
     border-top: 2px solid #EFC69B;  
     border-bottom: 2px solid #EFC69B;  
@@ -79,6 +78,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 .book-cover {
@@ -89,4 +89,15 @@ body {
 .review-content {
     font-size: 1em;
     margin: 0;
+}
+
+.skiptocontent a {
+	/* set the element to absolute positioning */
+	position:absolute;
+    top:-40px
+	/* Make sure it will be on the left edge of the screen */
+	/* Change the background and color to something that stands out */
+}
+.skiptocontent a:focus {
+	top:0/* Move it back on when focused */
 }
