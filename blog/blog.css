@@ -67,7 +67,7 @@ body {
 }
 
 .review-title {
-    grid-column: span 2;
+    
     font-size: 1.5em;
     margin: 0 0 10px;
     color: #AF1B3F;
@@ -84,12 +84,16 @@ body {
 .book-cover {
     max-width: 100%;
     height: auto;
+    text-align: center;
 }
 
 .review-content {
+    grid-column: span 1;
     font-size: 1em;
     margin: 0;
 }
+
+
 
 .skiptocontent a {
 	/* set the element to absolute positioning */
