@@ -17,7 +17,6 @@ body {
     padding: 10px 0;
     border-top: 2px solid #EFC69B;  
     border-bottom: 2px solid #EFC69B;  
-
 }
 
 .main-header nav ul {
@@ -42,7 +41,6 @@ body {
     color: #007BFF;
 }
 
-
 .grid {
     display: grid;
     grid-template-columns: 1fr 3fr;
@@ -50,13 +48,10 @@ body {
     padding: 20px;
 }
 
-
-
 .content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
-    
 }
 
 .book-meta {
@@ -66,19 +61,16 @@ body {
 }
 
 .review-title {
+    text-align: center;
     margin: 5px 0 10px;
     color: #AF1B3F;
-    
 }
 
 .book-details {
     display: flex;
     justify-content: center;
     align-items: center;
-    
 }
-
-
 
 .book-cover {
     max-width: 100%;
@@ -87,20 +79,14 @@ body {
 }
 
 .review-content {
-    grid-column: span 1;
     font-size: 1em;
-    margin: 0;
 }
-
-
 
 .skiptocontent a {
-	/* set the element to absolute positioning */
-	position:absolute;
-    top:-40px
-	/* Make sure it will be on the left edge of the screen */
-	/* Change the background and color to something that stands out */
+    position: absolute;
+    top: -40px;
 }
+
 .skiptocontent a:focus {
-	top:0/* Move it back on when focused */
+    top: 0;
 }
