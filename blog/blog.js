@@ -24,4 +24,28 @@ const articles = [
 		genre: 'Fantasy',
 		stars: '⭐⭐⭐⭐'
 	}
-]
+] 
+ 
+ 
+ const outputElement = document.querySelector('.article-container');
+
+ function renderArticles() {
+    articles.forEach(article => {
+        const newArticle = document.createElement('article');
+        newArticle.classList.add('article'); 
+
+        const articleMarkup = `
+            <h2>${article.title}</h2>
+            <p>${article.date}</p>
+            <p>${article.content}</p>`;
+
+        newArticle.innerHTML = articleMarkup;
+        
+    });
+}
+
+renderArticles();
+
+
+
+

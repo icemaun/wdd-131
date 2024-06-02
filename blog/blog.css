@@ -54,22 +54,19 @@ body {
 
 .content {
     display: grid;
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 20px;
     
 }
 
-.review {
-    display: grid;
-    grid-template-columns: 1fr 2fr;
-    gap: 20px;
-    
+.book-meta {
+    border-right: 2px solid #EFC69B;
+    padding: 0 20px;
+    margin-left: 150px;
 }
 
 .review-title {
-    
-    font-size: 1.5em;
-    margin: 0 0 10px;
+    margin: 5px 0 10px;
     color: #AF1B3F;
     
 }
@@ -80,6 +77,8 @@ body {
     align-items: center;
     
 }
+
+
 
 .book-cover {
     max-width: 100%;
