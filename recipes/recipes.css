@@ -1,0 +1,23 @@
+
+figure {
+	max-width: 100%;
+}
+#social {
+    font-size:6em;
+}
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
+:root {
+--primary-color: #1B98E0;
+--secondary-color: #59c3c3;
+--text-dark: #333;
+--text-light: #ebebeb;
+--primary-font: Arial, Helvetica,sans-serif;
+--secondary-font: "Amatic SC";
+}
+
+
+
