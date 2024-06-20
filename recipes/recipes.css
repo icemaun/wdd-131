@@ -1,23 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC&display=swap");
 
-figure {
-	max-width: 100%;
-}
-#social {
-    font-size:6em;
-}
-
-
-
-
-@import url("https://fonts.googleapis.com/css2?family=family=Amatic+SC&display=swap");
 :root {
---primary-color: #1B98E0;
---secondary-color: #59c3c3;
---text-dark: #333;
---text-light: #ebebeb;
---primary-font: Arial, Helvetica,sans-serif;
---secondary-font: "Amatic SC";
+    --primary-color: #1B98E0;
+    --secondary-color: #59c3c3;
+    --text-dark: #333;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Amatic SC";
 }
 
+body {
+    font-family: var(--primary-font);
+    margin: 0;
+    padding: 0;
+    --primary-font: Arial, Helvetica, sans-serif;
+    --secondary-font: "Amatic SC";
+}
 
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-color);
+    padding: 10px;
+    text-align: center;
+    --primary-font: "Amatic SC";
 
+}
+
+header img {
+    max-width: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-family: var(--primary-font);
+    color: var(--text-light);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px 10px;
+}
+
+input[type="search"] {
+    width: calc(100% - 20px);
+    padding: 10px;
+    margin: 0 10px;
+    border-radius: 5px;
+}
+
+main.home-grid {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.gallery {
+    margin: 10px;
+    flex: 1;
+}
+
+.information {
+    display: flex;
+    gap: 10px;
+    margin: 10px 0;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--secondary-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #47b2b2;
+}
+
+.container, .container2 {
+    margin: 10px 0;    
+    
+}
+
+.rating {
+    text-align: left;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: var(--primary-color);
+    padding: 10px;
+}
+
+.social img {
+    width: 30px;
+    margin: 0 5px;
+}
+
+@media (min-width: 768px) {
+    main.home-grid {
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-between;
+    }
+
+    .gallery {
+        flex: 1;
+    }
+
+    .content {
+        flex: 1;
+        margin-left: 20px;
+        display: flex;
+        flex-direction: column;
+    }
+}
