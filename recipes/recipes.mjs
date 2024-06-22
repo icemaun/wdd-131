@@ -1,5 +1,6 @@
-const recipes = [
-	{
+
+export const recipes = [
+    {
 		author: 'Provo High Culinary Students',
 		url: '',
 		isBasedOn: '',
