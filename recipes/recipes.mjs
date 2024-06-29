@@ -1,5 +1,4 @@
-
-export const recipes = [
+const recipes = [
     {
 		author: 'Provo High Culinary Students',
 		url: '',
@@ -280,3 +279,5 @@ export const recipes = [
 		rating: 4
 	}
 ]
+
+export { recipes };

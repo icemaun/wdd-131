@@ -1,60 +1,76 @@
-// main.js
-
 import { recipes } from './recipes.mjs';
 
-document.addEventListener('DOMContentLoaded', function () {
-    const recipesSection = document.getElementById('recipes-section');
+function recipeTemplate(recipe) {
+  const tagsHtml = tagsTemplate(recipe.tags);
+  const ratingHtml = ratingTemplate(recipe.rating);
 
-    recipes.forEach(recipe => {
-        const recipeElement = document.createElement('article');
-        recipeElement.classList.add('recipe');
+  return `<figure class="recipe">
+    <img src="${recipe.image}" alt="image of ${recipe.name}" />
+    <figcaption>
+      <ul class="recipe__tags">${tagsHtml}</ul>
+      <h2><a href="#">${recipe.name}</a></h2>
+      <p class="recipe__ratings">${ratingHtml}</p>
+      <p class="recipe__description">${recipe.description}</p>
+    </figcaption>
+  </figure>`;
+}
 
-        // Recipe Image
-        const imageElement = document.createElement('img');
-        imageElement.src = recipe.image;
-        imageElement.alt = recipe.name;
-        recipeElement.appendChild(imageElement);
+function tagsTemplate(tags) {
+  const tagsHtml = tags.map(tag => `<li>${tag}</li>`).join('');
+  return tagsHtml;
+}
 
-        // Recipe Title
-        const titleElement = document.createElement('h2');
-        titleElement.textContent = recipe.name;
-        recipeElement.appendChild(titleElement);
+function ratingTemplate(rating) {
+  let starsHtml = '';
+  for (let i = 1; i <= 5; i++) {
+    if (i <= rating) {
+      starsHtml += '<span aria-hidden="true" class="icon-star">⭐</span>';
+    } else {
+      starsHtml += '<span aria-hidden="true" class="icon-star-empty">☆</span>';
+    }
+  }
+  const html = `<span class="rating" role="img" aria-label="Rating: ${rating} out of 5 stars">${starsHtml}</span>`;
+  return html;
+}
 
-        // Recipe Rating (Accessible)
-        const ratingElement = document.createElement('span');
-        ratingElement.classList.add('rating');
-        ratingElement.setAttribute('role', 'img');
-        ratingElement.setAttribute('aria-label', `Rating: ${recipe.rating} out of 5 stars`);
+function getRandomListEntry(list) {
+  const randomIndex = Math.floor(Math.random() * list.length);
+  return list[randomIndex];
+}
 
-        const filledStars = Math.floor(recipe.rating);
-        const emptyStars = 5 - filledStars;
+function renderRecipes(recipeList) {
+  const recipesSection = document.getElementById('recipes-section');
+  const recipesHtml = recipeList.map(recipe => recipeTemplate(recipe)).join('');
+  recipesSection.innerHTML = recipesHtml;
+}
 
-        for (let i = 0; i < filledStars; i++) {
-            const starElement = document.createElement('span');
-            starElement.textContent = '⭐'; // Filled star
-            starElement.setAttribute('aria-hidden', 'true');
-            starElement.classList.add('icon-star');
-            ratingElement.appendChild(starElement);
-        }
+function init() {
+  const recipe = getRandomListEntry(recipes);
+  renderRecipes([recipe]);
+}
 
-        for (let i = 0; i < emptyStars; i++) {
-            const starElement = document.createElement('span');
-            starElement.textContent = '☆'; // Empty star
-            starElement.setAttribute('aria-hidden', 'true');
-            starElement.classList.add('icon-star-empty');
-            ratingElement.appendChild(starElement);
-        }
+function filter(query) {
+  const filteredRecipes = recipes.filter(recipe => {
+    const searchTerm = query.toLowerCase();
+    return (
+      recipe.name.toLowerCase().includes(searchTerm) ||
+      recipe.description.toLowerCase().includes(searchTerm) ||
+      recipe.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+    );
+  });
+  return filteredRecipes;
+}
 
-        recipeElement.appendChild(ratingElement);
+function searchHandler(e) {
+  e.preventDefault();
+  const searchInput = document.getElementById('searchbar').value.toLowerCase();
+  const filteredRecipes = filter(searchInput);
+  renderRecipes(filteredRecipes);
+}
 
-        // Recipe Description
-        const descriptionElement = document.createElement('div');
-        descriptionElement.classList.add('container2');
-        const descriptionParagraph = document.createElement('p');
-        descriptionParagraph.textContent = recipe.description;
-        descriptionElement.appendChild(descriptionParagraph);
-        recipeElement.appendChild(descriptionElement);
-
-        recipesSection.appendChild(recipeElement);
-    });
+document.addEventListener('DOMContentLoaded', () => {
+  const searchButton = document.getElementById('search-button');
+  searchButton.addEventListener('click', searchHandler);
+  
+  init();
 });
