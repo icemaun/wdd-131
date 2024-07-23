@@ -250,7 +250,54 @@ footer p a:hover {
 }
 
 
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
 
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
 
+    nav a {
+        padding: 15px;
+        width: 100%;
+    }
 
+    .home-grid {
+        display: block;
+        padding: 0 20px;
+    }
+
+    .container,
+    .container2,
+    .contianer3,
+    .contianer4,
+    .contianer5,
+    .contianer6 {
+        padding: 10px 20px;
+    }
+
+    .Creating,
+    .Creating2,
+    .Creating7,
+    .creating3,
+    .creating4,
+    .creating5 {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .button-box {
+        margin-top: 20px;
+    }
+
+    footer {
+        flex-direction: column;
+        align-items: center;
+    }
+}
  

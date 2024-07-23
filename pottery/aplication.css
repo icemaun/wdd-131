@@ -1,0 +1,140 @@
+/* Existing styles */
+
+body {
+    font-family: 'Arial';
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
+    background-color: #f4dc94;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 150px auto;
+    font-size: 1.2em;
+    background-color: #ebb14d;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around;
+}
+
+nav a {
+    text-align: center;
+    color: #c84230;
+    text-decoration: none;
+    padding: 35px;
+}
+
+nav a:hover {
+    background-color: #c84230;
+    color: #ebb14d;
+}
+
+#logo_link {
+    padding-top: 5px;
+    justify-self: left;
+}
+
+.logo {
+    width: 110px;
+}
+
+.testbox {
+    width: 100%;
+    padding: 20px;
+    margin: auto;
+    background: #f4eed4;
+    border-radius: 6px;
+    box-shadow: 0 0 20px 0 #ceb2ab;
+    max-width: 800px;
+}
+
+h1 {
+    text-align: center;
+    color: #c84230;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+fieldset {
+    border: none;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+legend {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #c84230;
+}
+
+.item {
+    margin-bottom: 15px;
+    width: 100%;
+}
+
+.item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.item input,
+.item textarea,
+.item select {
+    width: calc(100% - 20px);
+    padding: 10px;
+    border: 1px solid #d1d1d1;
+    border-radius: 4px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+.btn-block {
+    text-align: center;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #ebb14d;
+    border: none;
+    color: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #c84230;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 900px) {
+    header {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav a {
+        padding: 15px;
+        width: 100%;
+    }
+
+    .testbox {
+        padding: 10px;
+    }
+}
